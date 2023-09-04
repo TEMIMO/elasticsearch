@@ -6,15 +6,18 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.elasticsearch.annotations.Setting;
 
-@Document(indexName = "person")
-@Setting(settingPath = "static/es-person-settings.json")
-public class Person {
+@Document(indexName = "book")
+@Setting(settingPath = "static/es-book-settings.json")
+public class Book {
     @Id
     @Field(type = FieldType.Keyword)
     private String id;
 
     @Field(type = FieldType.Text)
-    private String name;
+    private String title;
+
+    @Field(type = FieldType.Text)
+    private String author;
 
     public String getId() {
         return id;
@@ -24,11 +27,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

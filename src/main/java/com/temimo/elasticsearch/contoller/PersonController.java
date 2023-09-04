@@ -3,7 +3,6 @@ package com.temimo.elasticsearch.contoller;
 import com.temimo.elasticsearch.document.Person;
 import com.temimo.elasticsearch.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
