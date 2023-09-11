@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "id":  {
+      "type": "text"
+    },
+    "model": {
+      "type": "text",
+      "analyzer": "autocomplete",
+      "search_analyzer": "standard"
+    },
+    "creationDate": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd'T'HH:mm:ss.SSSZ||epoch_millis"
+    }
+  }
+}
